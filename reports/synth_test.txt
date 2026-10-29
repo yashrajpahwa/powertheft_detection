@@ -1,0 +1,40 @@
+int8 model theft_int8.tflite, 16 held-out consumers, theft prob/day 0.4, classes order ['Normal', 'Theft1', 'Theft2', 'Theft3', 'Theft4', 'Theft5', 'Theft6']
+--- seed 0
+realistic   acc 0.9885  macroF1 0.9810  theft-detect 0.9944  false-alarm 0.0066  per-class recall [0.993, 0.972, 0.987, 0.997, 0.938, 0.992, 0.998]
+new_cons    acc 0.9832  macroF1 0.9741  theft-detect 0.9909  false-alarm 0.0111  per-class recall [0.989, 0.946, 0.987, 0.99, 0.933, 0.99, 0.997]
+paper_spec  acc 0.9202  macroF1 0.8295  theft-detect 0.8331  false-alarm 0.0087  per-class recall [0.991, 0.964, 0.979, 0.998, 0.932, 1.0, 0.005]
+--- seed 1
+realistic   acc 0.9857  macroF1 0.9777  theft-detect 0.9897  false-alarm 0.0077  per-class recall [0.992, 0.939, 0.992, 0.995, 0.941, 0.992, 0.997]
+new_cons    acc 0.9830  macroF1 0.9738  theft-detect 0.9983  false-alarm 0.0165  per-class recall [0.983, 0.989, 0.965, 1.0, 0.945, 0.995, 1.0]
+paper_spec  acc 0.9286  macroF1 0.8326  theft-detect 0.8523  false-alarm 0.0081  per-class recall [0.992, 0.971, 0.976, 0.993, 0.953, 1.0, 0.006]
+--- seed 2
+realistic   acc 0.9863  macroF1 0.9769  theft-detect 0.9948  false-alarm 0.0082  per-class recall [0.992, 0.97, 0.984, 0.997, 0.915, 1.0, 1.0]
+new_cons    acc 0.9813  macroF1 0.9718  theft-detect 0.9924  false-alarm 0.0150  per-class recall [0.985, 0.949, 0.983, 0.994, 0.938, 0.995, 0.997]
+paper_spec  acc 0.9195  macroF1 0.8311  theft-detect 0.8219  false-alarm 0.0074  per-class recall [0.993, 0.958, 0.987, 0.989, 0.952, 1.0, 0.005]
+=== realistic: all 3 seeds, 17472 days | acc 0.9868 | macroF1 0.9786 | binary acc 0.9927
+true\pred    Norm     T1     T2     T3     T4     T5     T6  recall
+     Norm   10413     68      0      0      0      0     11  0.9925
+       T1      45   1080      0      0      0      0      0  0.9600
+       T2       0      0   1147      5      0      4      5  0.9879
+       T3       1      0      0   1136      3      0      0  0.9965
+       T4       0      0      0     80   1093      0      0  0.9318
+       T5       3      1      0      0      0   1152      2  0.9948
+       T6       0      0      2      0      0      0   1221  0.9984
+=== new_cons: all 3 seeds, 17472 days | acc 0.9825 | macroF1 0.9732 | binary acc 0.9890
+true\pred    Norm     T1     T2     T3     T4     T5     T6  recall
+     Norm   10325    135      0      3      1      0     10  0.9858
+       T1      41   1095      0      4      0      0      0  0.9605
+       T2       0      4   1154     15      4      1      2  0.9780
+       T3       0      0      0   1161      6      0      0  0.9949
+       T4       0      0      0     70   1077      0      0  0.9390
+       T5       2      4      1      0      0   1199      1  0.9934
+       T6       0      0      1      1      0      0   1155  0.9983
+=== paper_spec: all 3 seeds, 17472 days | acc 0.9227 | macroF1 0.8311 | binary acc 0.9294
+true\pred    Norm     T1     T2     T3     T4     T5     T6  recall
+     Norm   10382     77      0      0      0      0      7  0.9920
+       T1      42   1149      0      0      0      0      0  0.9647
+       T2       0      3   1173     12      3      2      3  0.9808
+       T3       0      1      0   1182      7      0      0  0.9933
+       T4       0      0      0     63   1111      0      0  0.9463
+       T5       0      0      0      0      0   1119      0  1.0000
+       T6    1108     10      0      0      1     11      6  0.0053

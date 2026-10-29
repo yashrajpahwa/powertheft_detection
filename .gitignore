@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Virtual environment (recreate with: pip install -r requirements.txt)
+.venv/
+venv/
+env/
+
+# Dataset: TDD2022 df.csv is 62 MB; download it separately (see README)
+df.csv
+*.csv
+
+# Preprocessed data cache, rebuilt by: python src/data.py --check
+cache/
+
+# Third-party paper PDF (publisher copyright; cite it instead of committing it)
+1-s2.0-S1319157822001562-main.pdf
+
+# C edge build outputs
+*.obj
+*.o
+*.exe
+*.pdb
+*.ilk
+
+# Editors and OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
