@@ -12,6 +12,11 @@ env/
 df.csv
 *.csv
 
+# Text files (keep the install list and the stress-test log the figure script reads)
+*.txt
+!requirements.txt
+!reports/synth_test.txt
+
 # Preprocessed data cache, rebuilt by: python src/data.py --check
 cache/
 
